@@ -252,6 +252,7 @@ Domain Reload Profiling: 1121ms
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (10ms)
 Refreshing native plugins compatible for Editor in 4.32 ms, found 4 plugins.
+
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4408 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 38 unused Assets / (37.3 KB). Loaded Objects now: 4893.
@@ -323,6 +324,13 @@ Unloading 4409 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 38 unused Assets / (36.4 KB). Loaded Objects now: 4897.
 Memory consumption went from 151.1 MB to 151.1 MB.
 Total: 2.550000 ms (FindLiveObjects: 0.208500 ms CreateObjectMapping: 0.171000 ms MarkObjects: 2.115700 ms  DeleteObjects: 0.053800 ms)
+=======
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4408 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (37.3 KB). Loaded Objects now: 4893.
+Memory consumption went from 150.8 MB to 150.8 MB.
+Total: 3.085300 ms (FindLiveObjects: 0.255700 ms CreateObjectMapping: 0.101300 ms MarkObjects: 2.670500 ms  DeleteObjects: 0.056600 ms)
+
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
