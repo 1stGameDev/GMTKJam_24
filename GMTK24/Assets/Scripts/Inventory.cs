@@ -26,4 +26,8 @@ public class Inventory : MonoBehaviour
         currentlyHolding = null;
         handRenderer.sprite = null;
     }
+
+    public string CheckInventory(){
+        return currentlyHolding;
+    }
 }
