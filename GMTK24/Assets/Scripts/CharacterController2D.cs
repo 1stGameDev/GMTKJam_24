@@ -3,11 +3,8 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
 	[SerializeField] private float m_MovementSpeedMaximum = 2.5f;				// Rudi - Maximum speed so we don't go as fast
->>>>>>> Rudi_branch
-	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
+	[SerializeField] private float m_JumpForce = 2000f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
@@ -112,20 +109,10 @@ public class CharacterController2D : MonoBehaviour
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
-<<<<<<< HEAD
-			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-=======
 
 			// Rudi - replaced this with AddForce so we get a bit of momentum
-			//m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-			Vector3 newVelocity = new Vector2(move * 10.0f, 0.0f);
-			m_Rigidbody2D.AddForce(newVelocity);
-
-			// Rudi - clamp speed so we don't gain too much momentum
-			float clampedSpeed = Mathf.Clamp(m_Rigidbody2D.velocity.x, -m_MovementSpeedMaximum, m_MovementSpeedMaximum);
-			m_Rigidbody2D.velocity = new Vector2(clampedSpeed, m_Rigidbody2D.velocity.y);
-			Debug.Log(m_Rigidbody2D.velocity.magnitude);
->>>>>>> Rudi_branch
+			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+			
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
