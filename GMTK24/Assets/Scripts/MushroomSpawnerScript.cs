@@ -21,8 +21,19 @@ public class MushroomSpawnerScript : MonoBehaviour
     }
     
     private void Spawn(){
-        GameObject newMushroom = Instantiate(mushroomPrefab, transform.position, Quaternion.identity);
-        newMushroom.GetComponent<Pickable>().Initialize(this);
+        GameObject newObj = Instantiate(mushroomPrefab, transform.position, Quaternion.identity);
+        if (newObj)
+        {
+            Mushroom mushroom = newObj.GetComponent<Mushroom>();
+            if (mushroom)
+            {
+                Pickable pickable = mushroom.GetPickableComponent();
+                if (pickable)
+                {
+                    pickable.Initialize(this);
+                }
+            }
+        }
     }
 
     public void Picked(){
