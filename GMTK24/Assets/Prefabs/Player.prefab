@@ -228,7 +228,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_GroundCheck: {fileID: 4008169384691815668}
   m_CeilingCheck: {fileID: 3136734437996628906}
   m_CrouchDisableCollider: {fileID: 0}
