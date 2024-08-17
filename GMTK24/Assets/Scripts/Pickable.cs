@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Pickable : MonoBehaviour
 {
+    [SerializeField]
+    private string InventoryName;
 
+    [SerializeField]
+    private GameObject ParentObj;
+    [SerializeField]
+    private SpriteRenderer MushroomSpriteRenderer;
+
+    private MushroomSpawnerScript spawner;
     private bool playerInRange = false;
     private GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
+   public void Initialize(MushroomSpawnerScript spw){
+        spawner = spw;
+   }
 
     // Update is called once per frame
     void Update()
@@ -37,8 +44,30 @@ public class Pickable : MonoBehaviour
     }
 
     private void PickUp(){
-        if(player.GetComponent<Inventory>().PickUpItem(this.tag, this.GetComponent<SpriteRenderer>().sprite)){
-            Destroy(this.gameObject);
+        if (player)
+        {
+            Inventory inv = player.GetComponent<Inventory>();
+            if (inv)
+            {
+                Sprite sprite = null;
+                if (MushroomSpriteRenderer)
+                {
+                    sprite = MushroomSpriteRenderer.sprite;
+                }
+
+                if (inv.PickUpItem(InventoryName, sprite))
+                {
+                    if (spawner)
+                    {
+                        spawner.Picked();
+                    }
+
+                    if (ParentObj)
+                    {
+                        Destroy(ParentObj);
+                    }
+                }
+            }
         }
     }
 }
