@@ -36,9 +36,9 @@ private Inventory inventory;
         if(playerTransform.localScale.y > 1.5){
             return false;
         }
-        if(inventory.CheckInventory() != "grow"){
-            return false;
-        }
+        //if(inventory.CheckInventory() != "grow"){
+            //return false;
+        //}
         playerTransform.localScale = new Vector3(playerTransform.localScale.x * 1.5f, playerTransform.localScale.y * 1.5f, playerTransform.localScale.z);
         rb.mass *= 2.5f;
         characterController2D.m_JumpForce *= 2.5f;
@@ -50,9 +50,9 @@ private Inventory inventory;
         if(playerTransform.localScale.y < 0.6){
             return false;
         }
-        if(inventory.CheckInventory() != "shrink"){
-            return false;
-        }
+        //if(inventory.CheckInventory() != "shrink"){
+            //return false;
+        //}
         playerTransform.localScale = new Vector3(playerTransform.localScale.x / 1.5f, playerTransform.localScale.y / 1.5f, playerTransform.localScale.z);
         rb.mass /= 2.5f;
         characterController2D.m_JumpForce /= 2.5f;
