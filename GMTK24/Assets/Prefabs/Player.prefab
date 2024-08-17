@@ -169,6 +169,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1727455403417859622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6301952166989144740}
+  m_Layer: 3
+  m_Name: ThrowSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6301952166989144740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727455403417859622}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4134769976679607149}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2158819828723244117
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +751,7 @@ GameObject:
   - component: {fileID: 1500890363778655104}
   - component: {fileID: 8480048404937505356}
   - component: {fileID: 6479059637907353506}
+  - component: {fileID: 6169518986542554743}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -749,6 +781,7 @@ Transform:
   - {fileID: 9110684987744557466}
   - {fileID: 3255063749026690804}
   - {fileID: 1562753781636325205}
+  - {fileID: 6301952166989144740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4811180303373131400
@@ -925,6 +958,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handRenderer: {fileID: 28864686834400154}
+--- !u!114 &6169518986542554743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525877070812766467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1955f030faf874c4f97361ed20e4b5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrowLocation: {fileID: 6301952166989144740}
+  ThrowForce: {x: 35, y: 25}
+  ThrowableScale: {x: 0.12, y: 0.12, z: 0.12}
 --- !u!1 &9148368468433045129
 GameObject:
   m_ObjectHideFlags: 0
