@@ -5,13 +5,13 @@ using UnityEngine;
 public class Pickable : MonoBehaviour
 {
 
+    private MushroomSpawnerScript spawner;
     private bool playerInRange = false;
     private GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
+   public void Initialize(MushroomSpawnerScript spw){
+        spawner = spw;
+   }
 
     // Update is called once per frame
     void Update()
@@ -38,6 +38,7 @@ public class Pickable : MonoBehaviour
 
     private void PickUp(){
         if(player.GetComponent<Inventory>().PickUpItem(this.tag, this.GetComponent<SpriteRenderer>().sprite)){
+            spawner.Picked();
             Destroy(this.gameObject);
         }
     }
