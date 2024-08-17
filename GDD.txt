@@ -1,0 +1,10 @@
+TITLE: to decide yet.
+
+ABSTRACT:
+Platform/puzzel game where you have to change your size to solve the level. You find objects in the level you can pick them up and use them to grow or shrink.
+
+
+MECHANICS OVERVIEW:
+PICK UP OBJECT: You find different types of objects in the level. You can pick them up by touching them.
+GROW: You can use one of the objects to grow on size.
+SHRINK: You can use another type of object to shrink.
