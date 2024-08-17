@@ -5,6 +5,7 @@
 [Bb]uild/
 [Ll]ibrary/
 [Ll]ocal[Cc]ache/
+[Ll]ogs/
 [Oo]bj/
 [Tt]emp/
 [Uu]nityGenerated/
@@ -19,6 +20,7 @@ sysinfo.txt
 [Ee]xportedObj/
 *.booproj
 *.csproj
+*.log
 *.sln
 *.suo
 *.svd
@@ -39,3 +41,4 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+/GMTK24/UserSettings
