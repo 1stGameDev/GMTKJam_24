@@ -133,6 +133,9 @@ public class GrowScript : MonoBehaviour
         if(CurrentSize == 0){
             return false;
         }
+        if(CurrentSize <= -2){
+            playerTransform.localPosition = new Vector3(playerTransform.localPosition.x, playerTransform.localPosition.y + 0.5f, playerTransform.localPosition.z);
+        }
 
         CurrentSize = 0;
 
@@ -141,7 +144,7 @@ public class GrowScript : MonoBehaviour
 
         if (characterController2D)
         {
-            characterController2D.m_JumpForce = 700;
+            characterController2D.m_JumpForce = 1100;
         }
         
         if (inventory)
