@@ -24100,6 +24100,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4811180303373131400, guid: 7afebc0b42a8600488950ac7baf12891, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 721718415}
     - target: {fileID: 8525877070812766467, guid: 7afebc0b42a8600488950ac7baf12891, type: 3}
       propertyPath: m_Name
       value: Player
@@ -24175,6 +24179,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+--- !u!114 &721718415 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6373583352841652280, guid: 34611f4a27ebd9543b50b4d830a96330, type: 3}
+  m_PrefabInstance: {fileID: 481938470041012416}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e43962a9d6bf5f44a4d3ae064e88fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &980434272
 PrefabInstance:
   m_ObjectHideFlags: 0
