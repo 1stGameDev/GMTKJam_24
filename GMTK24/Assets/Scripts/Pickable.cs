@@ -22,6 +22,15 @@ public class Pickable : MonoBehaviour
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
+            if (player)
+            {
+                Animator anim = player.GetComponent<Animator>();
+                if (anim)
+                {
+                    anim.Play("Pickup", anim.GetLayerIndex("Eating"));
+                }
+            }
+
             PickUp();
         }
     }

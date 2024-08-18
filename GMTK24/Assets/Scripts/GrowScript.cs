@@ -6,7 +6,7 @@ using UnityEngine.TextCore.Text;
 
 public class GrowScript : MonoBehaviour
 {
-
+    private Animator playerAnimator;
     private Transform playerTransform;
     private Rigidbody2D rb;
     private CharacterController2D characterController2D;
@@ -32,6 +32,7 @@ public class GrowScript : MonoBehaviour
         characterController2D = GetComponent<CharacterController2D>();
         inventory = GetComponent<Inventory>();
         playerThrowing = GetComponent<PlayerThrowing>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,16 +42,25 @@ public class GrowScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 string currentlyHolding = inventory.CheckInventory();
-                if (currentlyHolding == "grow")
+                if (currentlyHolding != "" && currentlyHolding != null)
                 {
-                    Grow();
-                }
-                else if (currentlyHolding == "shrink")
-                {
-                    Shrink();
-                }
-                else if(currentlyHolding == "normal"){
-                    Normal();
+                    if (playerAnimator)
+                    {
+                        playerAnimator.Play("Eating", playerAnimator.GetLayerIndex("Eating"));
+                    }
+
+                    if (currentlyHolding == "grow")
+                    {
+                        Grow();
+                    }
+                    else if (currentlyHolding == "shrink")
+                    {
+                        Shrink();
+                    }
+                    else if (currentlyHolding == "normal")
+                    {
+                        Normal();
+                    }
                 }
             }
         }

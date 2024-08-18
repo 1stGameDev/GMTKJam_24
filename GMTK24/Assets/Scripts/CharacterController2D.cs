@@ -32,6 +32,8 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
+	private Animator m_CharAnimator;
+
 	public bool GetFacingRight()
     {
 		return m_FacingRight;
@@ -40,6 +42,7 @@ public class CharacterController2D : MonoBehaviour
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		m_CharAnimator = GetComponent<Animator>();
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
@@ -72,9 +75,14 @@ public class CharacterController2D : MonoBehaviour
                         {
 							camScript.OnLanded();
                         }
-					}						
+					}
 				}
 			}
+		}
+
+		if (m_CharAnimator)
+		{
+			m_CharAnimator.SetBool("IsGrounded", m_Grounded);
 		}
 	}
 
@@ -94,7 +102,6 @@ public class CharacterController2D : MonoBehaviour
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
-
 			// If crouching
 			if (crouch)
 			{
@@ -128,6 +135,11 @@ public class CharacterController2D : MonoBehaviour
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
+			if (m_CharAnimator)
+            {
+				m_CharAnimator.SetFloat("WalkSpeed", Mathf.Abs(m_Rigidbody2D.velocity.x));
+			}
+
 			// Rudi - replaced this with AddForce so we get a bit of momentum
 			//Vector3 newVelocity = new Vector2(move * 10.0f, 0.0f);
 			//m_Rigidbody2D.AddForce(newVelocity);
@@ -155,6 +167,11 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+
+			if (m_CharAnimator)
+            {
+				m_CharAnimator.Play("Jumping", m_CharAnimator.GetLayerIndex("Walking"));
+            }
 		}
 	}
 
