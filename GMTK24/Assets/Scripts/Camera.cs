@@ -29,9 +29,6 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-<<<<<<< HEAD
-        gameObject.transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y, -10);
-=======
         float playerHeight = playerTransform.position.y + CameraVerticalHeightOffset;
         if (playerHeight <= CurrentPlayerMinimumHeight)
         {
@@ -49,6 +46,5 @@ public class Camera : MonoBehaviour
         }
 
         gameObject.transform.position = new Vector3(playerTransform.position.x, newHeight, -10);
->>>>>>> main
     }
 }
