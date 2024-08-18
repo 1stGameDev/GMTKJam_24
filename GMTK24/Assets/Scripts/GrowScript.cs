@@ -13,16 +13,17 @@ public class GrowScript : MonoBehaviour
     private Inventory inventory;
     [SerializeField] private ParticleSystem growParicles;
     [SerializeField] private ParticleSystem shrinkParticles;
+    [SerializeField] private ParticleSystem normalParticles;
     private ParticleSystem currentParticles;
     private PlayerThrowing playerThrowing;
 
     private int CurrentSize = 0;
 
     [SerializeField]
-    private int MinSize = -3;
+    private int MinSize = -2;
 
     [SerializeField]
-    private int MaxSize = 3;
+    private int MaxSize = 2;
 
     void Start()
     {
@@ -47,6 +48,9 @@ public class GrowScript : MonoBehaviour
                 else if (currentlyHolding == "shrink")
                 {
                     Shrink();
+                }
+                else if(currentlyHolding == "normal"){
+                    Normal();
                 }
             }
         }
@@ -125,6 +129,40 @@ public class GrowScript : MonoBehaviour
         return true;
     }
 
+    private bool Normal(){
+        if(CurrentSize == 0){
+            return false;
+        }
+
+        CurrentSize = 0;
+
+        playerTransform.localScale = new Vector3(playerTransform.localScale.x / Mathf.Abs(playerTransform.localScale.x), playerTransform.localScale.y / playerTransform.localScale.y, playerTransform.localScale.z);
+        rb.mass = 1;
+
+        if (characterController2D)
+        {
+            characterController2D.m_JumpForce = 700;
+        }
+        
+        if (inventory)
+        {
+            inventory.ConsumeItem();
+        }
+        
+        currentParticles = normalParticles;
+        if (currentParticles)
+        {
+            currentParticles.Play();
+            StartCoroutine(StopParticlesAfterUse());
+        }
+
+        if (playerThrowing)
+        {
+            playerThrowing.NormalizeThrowMultiplier();
+        }
+
+        return true;
+    }
     private IEnumerator StopParticlesAfterUse()
     {
         yield return new WaitForSeconds(0.5f); // Adjust the duration as needed

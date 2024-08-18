@@ -42,6 +42,9 @@ public class PlayerThrowing : MonoBehaviour
     {
         ThrowMultiplier *= multiplier;
     }
+    public void NormalizeThrowMultiplier(){
+        ThrowMultiplier = 1.0f;
+    }
 
     private void Throw()
     {
