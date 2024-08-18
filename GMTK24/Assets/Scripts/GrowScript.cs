@@ -20,10 +20,10 @@ public class GrowScript : MonoBehaviour
     private int CurrentSize = 0;
 
     [SerializeField]
-    private int MinSize = -3;
+    private int MinSize = -2;
 
     [SerializeField]
-    private int MaxSize = 3;
+    private int MaxSize = 2;
 
     void Start()
     {
@@ -130,13 +130,37 @@ public class GrowScript : MonoBehaviour
     }
 
     private bool Normal(){
-        playerTransform.localScale = new Vector3(1f, 1f, 1f);
-        rb.mass = 1f;
-        characterController2D.m_JumpForce = 700f;
-        inventory.ConsumeItem();
+        if(CurrentSize == 0){
+            return false;
+        }
+
+        CurrentSize = 0;
+
+        playerTransform.localScale = new Vector3(playerTransform.localScale.x / Mathf.Abs(playerTransform.localScale.x), playerTransform.localScale.y / playerTransform.localScale.y, playerTransform.localScale.z);
+        rb.mass = 1;
+
+        if (characterController2D)
+        {
+            characterController2D.m_JumpForce = 700;
+        }
+        
+        if (inventory)
+        {
+            inventory.ConsumeItem();
+        }
+        
         currentParticles = normalParticles;
-        currentParticles.Play();
-        StartCoroutine(StopParticlesAfterUse());
+        if (currentParticles)
+        {
+            currentParticles.Play();
+            StartCoroutine(StopParticlesAfterUse());
+        }
+
+        if (playerThrowing)
+        {
+            playerThrowing.NormalizeThrowMultiplier();
+        }
+
         return true;
     }
     private IEnumerator StopParticlesAfterUse()

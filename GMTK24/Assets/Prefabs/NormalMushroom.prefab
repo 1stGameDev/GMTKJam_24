@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c4747e274d5e459ae0285e5e0bd1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventoryName: normal
   PickableComponent: {fileID: 2581711025002390471}
 --- !u!1 &9041080567298641794
 GameObject:
@@ -263,6 +264,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029185f4e34f279439cc3127127d9f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryName: normal
   ParentObj: {fileID: 2342070017512868624}
   MushroomSpriteRenderer: {fileID: 265922007838105541}
