@@ -13,6 +13,7 @@ private CharacterController2D characterController2D;
 private Inventory inventory;
 [SerializeField] private ParticleSystem growParicles;
 [SerializeField] private ParticleSystem shrinkParticles;
+[SerializeField] private ParticleSystem normalParticles;
 private ParticleSystem currentParticles;
 
     void Start()
@@ -37,6 +38,9 @@ private ParticleSystem currentParticles;
                 else if (currentlyHolding == "shrink")
                 {
                     Shrink();
+                }
+                else if(currentlyHolding == "normal"){
+                    Normal();
                 }
             }
         }
@@ -71,6 +75,16 @@ private ParticleSystem currentParticles;
         return true;
     }
 
+    private bool Normal(){
+        playerTransform.localScale = new Vector3(1f, 1f, 1f);
+        rb.mass = 1f;
+        characterController2D.m_JumpForce = 700f;
+        inventory.ConsumeItem();
+        currentParticles = normalParticles;
+        currentParticles.Play();
+        StartCoroutine(StopParticlesAfterUse());
+        return true;
+    }
     private IEnumerator StopParticlesAfterUse()
 {
     yield return new WaitForSeconds(0.5f); // Adjust the duration as needed
