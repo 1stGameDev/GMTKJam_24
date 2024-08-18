@@ -11,6 +11,9 @@ private Transform playerTransform;
 private Rigidbody2D rb;
 private CharacterController2D characterController2D;
 private Inventory inventory;
+[SerializeField] private ParticleSystem growParicles;
+[SerializeField] private ParticleSystem shrinkParticles;
+private ParticleSystem currentParticles;
 
     void Start()
     {
@@ -43,6 +46,9 @@ private Inventory inventory;
         rb.mass *= 2.5f;
         characterController2D.m_JumpForce *= 2.5f;
         inventory.ConsumeItem();
+        currentParticles = growParicles;
+        currentParticles.Play();
+        StartCoroutine(StopParticlesAfterUse());
         return true;
     }
 
@@ -57,6 +63,15 @@ private Inventory inventory;
         rb.mass /= 2.5f;
         characterController2D.m_JumpForce /= 2.5f;
         inventory.ConsumeItem();
+        currentParticles = shrinkParticles;
+        currentParticles.Play();
+        StartCoroutine(StopParticlesAfterUse());
         return true;
     }
+
+    private IEnumerator StopParticlesAfterUse()
+{
+    yield return new WaitForSeconds(0.5f); // Adjust the duration as needed
+    currentParticles.Stop();
+}
 }
