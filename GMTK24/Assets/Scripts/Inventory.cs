@@ -5,10 +5,16 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
 
-    private string currentlyHolding;
+    private string currentlyHolding = null;
     [SerializeField] private SpriteRenderer handRenderer;
 
+    [SerializeField]
+    private float PickUpDelay = 0.05f;
+
     private PlayerThrowing ThrowingComp;
+
+    private string ItemToPickUpAfterDelay = null;
+    private float TimeSincePickUp = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +24,20 @@ public class Inventory : MonoBehaviour
         ThrowingComp = GetComponent<PlayerThrowing>();
     }
 
+    private void Update()
+    {
+        // Make it so we don't pick up an item for a short delay so we don't pick up and eat on the same frame
+        TimeSincePickUp += Time.deltaTime;
+        if (TimeSincePickUp >= PickUpDelay)
+        {
+            if (ItemToPickUpAfterDelay != null)
+            {
+                currentlyHolding = ItemToPickUpAfterDelay;
+                ItemToPickUpAfterDelay = null;
+            }
+        }
+    }
+
     public bool PickUpItem(GameObject item, string obj, Sprite sprite)
     {
         if(currentlyHolding != null)
@@ -25,7 +45,14 @@ public class Inventory : MonoBehaviour
             return false;
         }
 
-        currentlyHolding = obj;
+        if (TimeSincePickUp < PickUpDelay)
+        {
+            return false;
+        }
+
+        TimeSincePickUp = 0.0f;
+
+        ItemToPickUpAfterDelay = obj;
         handRenderer.sprite = sprite;
 
         if (ThrowingComp)
@@ -39,6 +66,7 @@ public class Inventory : MonoBehaviour
     public void ConsumeItem()
     {
         currentlyHolding = null;
+        ItemToPickUpAfterDelay = null;
         handRenderer.sprite = null;
 
         if (ThrowingComp)

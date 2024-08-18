@@ -24,15 +24,23 @@ private ParticleSystem currentParticles;
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.G)){
-            Grow();
-        }
-        if(Input.GetKeyDown(KeyCode.F)){
-            Shrink();
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (inventory)
+            {
+                string currentlyHolding = inventory.CheckInventory();
+                if (currentlyHolding == "grow")
+                {
+                    Grow();
+                }
+                else if (currentlyHolding == "shrink")
+                {
+                    Shrink();
+                }
+            }
         }
     }
-
-
 
     private bool Grow()
     {
