@@ -188,3 +188,45 @@ Start importing Assets/Scripts/Camera.cs using Guid(3e43962a9d6bf5f44a4d3ae064e8
  -> (artifact id: '4253ca9570660ee1f0db5a48dfc56b2a') in 0.002562 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 295.348615 seconds.
+  path: Assets/Prefabs/Main Camera.prefab
+  artifactKey: Guid(34611f4a27ebd9543b50b4d830a96330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Main Camera.prefab using Guid(34611f4a27ebd9543b50b4d830a96330) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '777cdc1acd153e034afa14ec1d8b3998') in 0.025229 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.033883 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(7afebc0b42a8600488950ac7baf12891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(7afebc0b42a8600488950ac7baf12891) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f4e02615d460f193de691faf4401eb37') in 0.002137 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefabs/Spawner.prefab
+  artifactKey: Guid(5a9c87e80f2215044ae8680306e58dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Spawner.prefab using Guid(5a9c87e80f2215044ae8680306e58dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4f4f7907990f67c434dac28895edec2a') in 0.008131 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefabs/ShrinkingMushroom.prefab
+  artifactKey: Guid(6143d7d0d0aedb24db524c5a28f2a3fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ShrinkingMushroom.prefab using Guid(6143d7d0d0aedb24db524c5a28f2a3fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '64011c6a9326d5cdfb027f7536597955') in 0.082080 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
