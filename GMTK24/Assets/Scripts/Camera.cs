@@ -4,17 +4,51 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-
     public Transform playerTransform;
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField]
+    private float CameraVerticalHeightOffset = 5.0f;
+    [SerializeField]
+    private float CameraHeightCatchupLerp = 0.1f;
+
+    private float CurrentPlayerMinimumHeight = float.MaxValue;
+    private bool JustLanded = false;
+
+    public void OnLanded()
     {
-        
+        JustLanded = true;
+        CurrentPlayerMinimumHeight = playerTransform.position.y + CameraVerticalHeightOffset;
+    }
+
+    private void Start()
+    {
+        CurrentPlayerMinimumHeight = playerTransform.position.y;
+        transform.position = new Vector3(playerTransform.position.x, CurrentPlayerMinimumHeight, -10);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
+<<<<<<< HEAD
         gameObject.transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y, -10);
+=======
+        float playerHeight = playerTransform.position.y + CameraVerticalHeightOffset;
+        if (playerHeight <= CurrentPlayerMinimumHeight)
+        {
+            CurrentPlayerMinimumHeight = playerHeight;
+        }
+
+        float newHeight = CurrentPlayerMinimumHeight;
+        if (JustLanded && Mathf.Abs(transform.position.y - CurrentPlayerMinimumHeight) > 0.01f)
+        {
+            newHeight = Mathf.Lerp(transform.position.y, CurrentPlayerMinimumHeight, CameraHeightCatchupLerp);
+        }
+        else
+        {
+            JustLanded = false;
+        }
+
+        gameObject.transform.position = new Vector3(playerTransform.position.x, newHeight, -10);
+>>>>>>> main
     }
 }

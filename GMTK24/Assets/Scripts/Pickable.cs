@@ -57,7 +57,7 @@ public class Pickable : MonoBehaviour
                     sprite = MushroomSpriteRenderer.sprite;
                 }
 
-                if (inv.PickUpItem(InventoryName, sprite))
+                if (inv.PickUpItem(ParentObj, InventoryName, sprite))
                 {
                     if (spawner)
                     {
@@ -66,7 +66,8 @@ public class Pickable : MonoBehaviour
 
                     if (ParentObj)
                     {
-                        Destroy(ParentObj);
+                        // Disable instead of destroy so that the references aren't deleted
+                        ParentObj.SetActive(false);
                     }
                 }
             }
