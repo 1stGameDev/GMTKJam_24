@@ -107,5 +107,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   CameraVerticalHeightOffset: 1
-  CameraMinHeightUpdateDelay: 5
-  CameraHeightCatchupLerp: 0.05
+  CameraHeightCatchupLerp: 0.01
