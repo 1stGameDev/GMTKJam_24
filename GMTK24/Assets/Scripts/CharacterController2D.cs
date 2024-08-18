@@ -64,7 +64,15 @@ public class CharacterController2D : MonoBehaviour
 				{
 					m_Grounded = true;
 					if (!wasGrounded)
+                    {
 						OnLandEvent.Invoke();
+
+						CameraScript camScript = Camera.main.GetComponent<CameraScript>();
+						if (camScript)
+                        {
+							camScript.OnLanded();
+                        }
+					}						
 				}
 			}
 		}

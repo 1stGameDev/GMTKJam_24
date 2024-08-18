@@ -5,9 +5,6 @@ using UnityEngine;
 public class Pickable : MonoBehaviour
 {
     [SerializeField]
-    private string InventoryName;
-
-    [SerializeField]
     private GameObject ParentObj;
     [SerializeField]
     private SpriteRenderer MushroomSpriteRenderer;
@@ -55,7 +52,14 @@ public class Pickable : MonoBehaviour
                     sprite = MushroomSpriteRenderer.sprite;
                 }
 
-                if (inv.PickUpItem(ParentObj, InventoryName, sprite))
+                string name = "";
+                Mushroom mushroom = ParentObj.GetComponent<Mushroom>();
+                if (mushroom)
+                {
+                    name = mushroom.GetInventoryName();
+                }
+
+                if (inv.PickUpItem(ParentObj, name, sprite))
                 {
                     if (spawner)
                     {
