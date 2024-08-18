@@ -23,15 +23,12 @@ public class FanScript : MonoBehaviour
     }
 
     private void OnTriggerStay2D(Collider2D other) {
-        if(other.CompareTag("Player"))
+        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+        if (rb != null)
         {
-            Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-            if(rb != null)
-            {
-                Vector2 windDirection = transform.up;
-                Vector2 windForce = windDirection * windStrength;
-                rb.AddForce(windForce, ForceMode2D.Force);
-            }
+            Vector2 windDirection = transform.up;
+            Vector2 windForce = windDirection * windStrength;
+            rb.AddForce(windForce, ForceMode2D.Force);
         }
     }
 }

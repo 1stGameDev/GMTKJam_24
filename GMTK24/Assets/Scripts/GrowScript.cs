@@ -7,13 +7,22 @@ using UnityEngine.TextCore.Text;
 public class GrowScript : MonoBehaviour
 {
 
-private Transform playerTransform;
-private Rigidbody2D rb;
-private CharacterController2D characterController2D;
-private Inventory inventory;
-[SerializeField] private ParticleSystem growParicles;
-[SerializeField] private ParticleSystem shrinkParticles;
-private ParticleSystem currentParticles;
+    private Transform playerTransform;
+    private Rigidbody2D rb;
+    private CharacterController2D characterController2D;
+    private Inventory inventory;
+    [SerializeField] private ParticleSystem growParicles;
+    [SerializeField] private ParticleSystem shrinkParticles;
+    private ParticleSystem currentParticles;
+    private PlayerThrowing playerThrowing;
+
+    private int CurrentSize = 0;
+
+    [SerializeField]
+    private int MinSize = -3;
+
+    [SerializeField]
+    private int MaxSize = 3;
 
     void Start()
     {
@@ -21,13 +30,14 @@ private ParticleSystem currentParticles;
         rb = GetComponent<Rigidbody2D>();
         characterController2D = GetComponent<CharacterController2D>();
         inventory = GetComponent<Inventory>();
+        playerThrowing = GetComponent<PlayerThrowing>();
     }
 
-    void Update(){
-
-        if (Input.GetKeyDown(KeyCode.E))
+    void Update()
+    {
+        if (inventory)
         {
-            if (inventory)
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 string currentlyHolding = inventory.CheckInventory();
                 if (currentlyHolding == "grow")
@@ -42,38 +52,82 @@ private ParticleSystem currentParticles;
         }
     }
 
-    private bool Grow()
+    public bool Grow()
     {
-        if(playerTransform.localScale.y > 1.5){
+        if (CurrentSize >= MaxSize)
+        {
             return false;
         }
+
+        CurrentSize++;
+
         playerTransform.localScale = new Vector3(playerTransform.localScale.x * 1.5f, playerTransform.localScale.y * 1.5f, playerTransform.localScale.z);
         rb.mass *= 2.5f;
-        characterController2D.m_JumpForce *= 2.5f;
-        inventory.ConsumeItem();
+
+        if (characterController2D)
+        {
+            characterController2D.m_JumpForce *= 2.5f;
+        }
+        
+        if (inventory)
+        {
+            inventory.ConsumeItem();
+        }
+        
         currentParticles = growParicles;
-        currentParticles.Play();
-        StartCoroutine(StopParticlesAfterUse());
+        if (currentParticles)
+        {
+            currentParticles.Play();
+            StartCoroutine(StopParticlesAfterUse());
+        }
+
+        if (playerThrowing)
+        {
+            playerThrowing.MultiplyThrowMultiplier(2.5f);
+        }
+
         return true;
     }
 
-    private bool Shrink(){
-        if(playerTransform.localScale.y < 0.6){
+    public bool Shrink(){
+        if (CurrentSize <= MinSize)
+        {
             return false;
         }
+
+        CurrentSize--;
+
         playerTransform.localScale = new Vector3(playerTransform.localScale.x / 1.5f, playerTransform.localScale.y / 1.5f, playerTransform.localScale.z);
         rb.mass /= 2.5f;
-        characterController2D.m_JumpForce /= 2.5f;
-        inventory.ConsumeItem();
+
+        if (characterController2D)
+        {
+            characterController2D.m_JumpForce /= 2.5f;
+        }
+        
+        if (inventory)
+        {
+            inventory.ConsumeItem();
+        }
+        
         currentParticles = shrinkParticles;
-        currentParticles.Play();
-        StartCoroutine(StopParticlesAfterUse());
+        if (currentParticles)
+        {
+            currentParticles.Play();
+            StartCoroutine(StopParticlesAfterUse());
+        }
+
+        if (playerThrowing)
+        {
+            playerThrowing.MultiplyThrowMultiplier(1 / 2.5f);
+        }
+
         return true;
     }
 
     private IEnumerator StopParticlesAfterUse()
-{
-    yield return new WaitForSeconds(0.5f); // Adjust the duration as needed
-    currentParticles.Stop();
-}
+    {
+        yield return new WaitForSeconds(0.5f); // Adjust the duration as needed
+        currentParticles.Stop();
+    }
 }
