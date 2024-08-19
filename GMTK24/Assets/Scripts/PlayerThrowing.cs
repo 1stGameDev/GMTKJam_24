@@ -18,6 +18,7 @@ public class PlayerThrowing : MonoBehaviour
 
     private CharacterController2D CharCont;
     private Rigidbody2D PlayerRigidbody;
+    private Animator PlayerAnimator;
 
     private float ThrowMultiplier = 1.0f;
 
@@ -25,6 +26,7 @@ public class PlayerThrowing : MonoBehaviour
     {
         CharCont = GetComponent<CharacterController2D>();
         PlayerRigidbody = GetComponent<Rigidbody2D>();
+        PlayerAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -51,6 +53,11 @@ public class PlayerThrowing : MonoBehaviour
         if (!CanThrow)
         {
             return;
+        }
+
+        if (PlayerAnimator)
+        {
+            PlayerAnimator.Play("Throwing", PlayerAnimator.GetLayerIndex("Eating"));
         }
 
         if (CurrentThrowable && ThrowLocation)
