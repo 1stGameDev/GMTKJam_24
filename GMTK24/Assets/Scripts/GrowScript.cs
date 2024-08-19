@@ -21,6 +21,7 @@ private ParticleSystem currentParticles;
         rb = GetComponent<Rigidbody2D>();
         characterController2D = GetComponent<CharacterController2D>();
         inventory = GetComponent<Inventory>();
+        rb.gravityScale = 5;
     }
 
     void Update(){
@@ -50,6 +51,10 @@ private ParticleSystem currentParticles;
         playerTransform.localScale = new Vector3(playerTransform.localScale.x * 1.5f, playerTransform.localScale.y * 1.5f, playerTransform.localScale.z);
         rb.mass *= 2.5f;
         characterController2D.m_JumpForce *= 2.5f;
+        if(rb.gravityScale < 5)
+        {
+            rb.gravityScale += 1;
+        }
         inventory.ConsumeItem();
         currentParticles = growParicles;
         currentParticles.Play();
@@ -58,19 +63,25 @@ private ParticleSystem currentParticles;
     }
 
     private bool Shrink(){
+
+    
         if(playerTransform.localScale.y < 0.6){
             return false;
         }
         playerTransform.localScale = new Vector3(playerTransform.localScale.x / 1.5f, playerTransform.localScale.y / 1.5f, playerTransform.localScale.z);
         rb.mass /= 2.5f;
         characterController2D.m_JumpForce /= 2.5f;
+        if((rb.gravityScale <= 5) & (rb.gravityScale > 3)){
+            rb.gravityScale = rb.gravityScale - 1;
+        }
         inventory.ConsumeItem();
         currentParticles = shrinkParticles;
         currentParticles.Play();
         StartCoroutine(StopParticlesAfterUse());
-        return true;
-    }
 
+        return true;
+    
+    }
     private IEnumerator StopParticlesAfterUse()
 {
     yield return new WaitForSeconds(0.5f); // Adjust the duration as needed
