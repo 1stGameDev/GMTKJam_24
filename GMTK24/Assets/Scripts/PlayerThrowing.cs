@@ -18,11 +18,15 @@ public class PlayerThrowing : MonoBehaviour
 
     private CharacterController2D CharCont;
     private Rigidbody2D PlayerRigidbody;
+    private Animator PlayerAnimator;
+
+    private float ThrowMultiplier = 1.0f;
 
     private void Start()
     {
         CharCont = GetComponent<CharacterController2D>();
         PlayerRigidbody = GetComponent<Rigidbody2D>();
+        PlayerAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -36,6 +40,14 @@ public class PlayerThrowing : MonoBehaviour
         }
     }
 
+    public void MultiplyThrowMultiplier(float multiplier)
+    {
+        ThrowMultiplier *= multiplier;
+    }
+    public void NormalizeThrowMultiplier(){
+        ThrowMultiplier = 1.0f;
+    }
+
     private void Throw()
     {
         if (!CanThrow)
@@ -43,10 +55,21 @@ public class PlayerThrowing : MonoBehaviour
             return;
         }
 
+        if (PlayerAnimator)
+        {
+            PlayerAnimator.Play("Throwing", PlayerAnimator.GetLayerIndex("Eating"));
+        }
+
         if (CurrentThrowable && ThrowLocation)
         {
             CurrentThrowable.transform.position = ThrowLocation.transform.position;
             CurrentThrowable.transform.localScale = ThrowableScale;
+
+            Mushroom mushroom = CurrentThrowable.GetComponent<Mushroom>();
+            if (mushroom)
+            {
+                mushroom.SetMushroomThrown();
+            }
 
             CurrentThrowable.SetActive(true);
 
