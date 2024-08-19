@@ -6,8 +6,13 @@ public class MushroomSpawnerScript : MonoBehaviour
 {
     public GameObject mushroomPrefab;
     [SerializeField] private float spawnDelay = 1.0f;
+    private ParticleSystem particles;
     private float spawnTimer = 0.0f;
     private bool isMushroom = false;
+
+    void Start(){
+        particles = GetComponent<ParticleSystem>();
+    }
 
     void Update(){
         if(!isMushroom){
@@ -30,10 +35,18 @@ public class MushroomSpawnerScript : MonoBehaviour
                 Pickable pickable = mushroom.GetPickableComponent();
                 if (pickable)
                 {
+                    particles.Play();
+                    StartCoroutine(StopParticlesAfterUse());
                     pickable.Initialize(this);
                 }
             }
         }
+    }
+
+    private IEnumerator StopParticlesAfterUse()
+    {
+        yield return new WaitForSeconds(0.5f); // Adjust the duration as needed
+        particles.Stop();
     }
 
     public void Picked(){

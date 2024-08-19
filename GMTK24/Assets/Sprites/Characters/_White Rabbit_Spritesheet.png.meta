@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 891
+        width: 151
+        height: 381
+      alignment: 9
+      pivot: {x: 0.54114217, y: 0.043441493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3f7225bacff7c419ec0b6b742f05b1
+      internalID: -2009051767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 874
+        width: 194
+        height: 354
+      alignment: 9
+      pivot: {x: 0.17176473, y: 0.061267227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe4d130721d6ef4884c8e6eb91e0128
+      internalID: 1060600775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 710
+        width: 539
+        height: 529
+      alignment: 9
+      pivot: {x: 0.4222001, y: 0.05080075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac8d7036c8b12f45b4cd51855ccc0a8
+      internalID: 874104747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 927
+        width: 157
+        height: 258
+      alignment: 9
+      pivot: {x: 0.64838696, y: 0.9153674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484ce5a1c7a184a4992b3990c9a78847
+      internalID: 2104409825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 929
+        width: 156
+        height: 260
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9121723}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd4a39d3653ee84e9c3db5cf291a28e
+      internalID: 721198708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 424
+        height: 425
+      alignment: 9
+      pivot: {x: 0.4597069, y: 0.04320176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99112a6af57a3904da41d60a332517a9
+      internalID: 1956658752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 419
+        width: 443
+        height: 221
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9076044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b51b9fc501743f42841416c1a6ae3bb
+      internalID: 875841231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 593
+        width: 164
+        height: 279
+      alignment: 9
+      pivot: {x: 0.4621195, y: 0.9119366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5c6d7d74261524aaa5e0cb09148f23
+      internalID: -1337460542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 589
+        width: 173
+        height: 277
+      alignment: 9
+      pivot: {x: 0.6167091, y: 0.9093042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c06646eeb0ffb4ca923be17f9ee3de
+      internalID: 268436331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 424
+        height: 424
+      alignment: 9
+      pivot: {x: 0.4597069, y: 0.04320176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790c3a89934195e41b791ec5edc31586
+      internalID: -614869055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 66
+        width: 218
+        height: 317
+      alignment: 9
+      pivot: {x: 0.5712437, y: 0.9409469}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0324a2c49842b74fafeae99a32b08a6
+      internalID: -1231043836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _White Rabbit_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 66
+        width: 218
+        height: 317
+      alignment: 9
+      pivot: {x: 0.5498708, y: 0.9458462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784a6730f3ba7274394d34437b4a9d87
+      internalID: 730347244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +358,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      _White Rabbit_Spritesheet_0: -2009051767
+      _White Rabbit_Spritesheet_1: 1060600775
+      _White Rabbit_Spritesheet_10: -1231043836
+      _White Rabbit_Spritesheet_11: 730347244
+      _White Rabbit_Spritesheet_2: 874104747
+      _White Rabbit_Spritesheet_3: 2104409825
+      _White Rabbit_Spritesheet_4: 721198708
+      _White Rabbit_Spritesheet_5: 1956658752
+      _White Rabbit_Spritesheet_6: 875841231
+      _White Rabbit_Spritesheet_7: -1337460542
+      _White Rabbit_Spritesheet_8: 268436331
+      _White Rabbit_Spritesheet_9: -614869055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

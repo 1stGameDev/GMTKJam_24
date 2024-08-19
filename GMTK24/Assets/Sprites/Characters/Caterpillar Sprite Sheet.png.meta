@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,7 +95,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1254
+        width: 267
+        height: 131
+      alignment: 9
+      pivot: {x: 0.9364736, y: 0.34467345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c05d6818a6b1c547855f1fcc2233ef3
+      internalID: -1307046865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1337
+        width: 258
+        height: 135
+      alignment: 9
+      pivot: {x: 0.9230206, y: 0.29446614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdaae0eea2f6c946ad95fb6cd91542c
+      internalID: 954030742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 1232
+        height: 1515
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cda41b7c98a8c428614e14ee9f34a8
+      internalID: -694392709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1056
+        width: 133
+        height: 101
+      alignment: 9
+      pivot: {x: 0.90334314, y: 0.17033039}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2003b1c832f4df94bab4a2da87420a40
+      internalID: 989398542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1146
+        width: 158
+        height: 98
+      alignment: 9
+      pivot: {x: 0.13706043, y: 0.34899777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba3abee4c09fc24da061a4d19c36bac
+      internalID: 1241291622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1039
+        width: 115
+        height: 90
+      alignment: 9
+      pivot: {x: 0.80562186, y: 0.41778702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bbda5a467fedf4385532412046a4e6
+      internalID: -1160298959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 712
+        width: 123
+        height: 213
+      alignment: 9
+      pivot: {x: 0.75566584, y: 0.11787866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b3e9e7005e9394eac6d8a95ac7b1a9
+      internalID: 422577852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 804
+        width: 280
+        height: 51
+      alignment: 9
+      pivot: {x: 0.9558478, y: 0.10102156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212c6f5d625b7e64eb24938edf5bd3dd
+      internalID: 1945645447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 412
+        width: 301
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6a7bbc641b9ac4cadeeca410c209ef
+      internalID: 255939696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 347
+        width: 247
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f581be04ae678b34fb266645991b3cce
+      internalID: 2122050827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caterpillar Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 304
+        width: 162
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24d5b2717f488b488631da8feb89344
+      internalID: 1164786434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +337,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Caterpillar Sprite Sheet_0: -1307046865
+      Caterpillar Sprite Sheet_1: 954030742
+      Caterpillar Sprite Sheet_10: 1164786434
+      Caterpillar Sprite Sheet_2: -694392709
+      Caterpillar Sprite Sheet_3: 989398542
+      Caterpillar Sprite Sheet_4: 1241291622
+      Caterpillar Sprite Sheet_5: -1160298959
+      Caterpillar Sprite Sheet_6: 422577852
+      Caterpillar Sprite Sheet_7: 1945645447
+      Caterpillar Sprite Sheet_8: 255939696
+      Caterpillar Sprite Sheet_9: 2122050827
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
