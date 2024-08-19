@@ -15301,6 +15301,9 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 55
+  m_NoControlMask:
+    serializedVersion: 2
+    m_Bits: 0
   m_GroundCheck: {fileID: 4008169384691815668}
   m_CeilingCheck: {fileID: 3136734437996628906}
   m_CrouchDisableCollider: {fileID: 0}
@@ -15443,6 +15446,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e7a83ff5e2b844d9371b6e41c1347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NormalSizeIndex: 2
+  jumps:
+  - 300
+  - 1000
+  - 1500
+  - 0
+  - 0
+  - 0
+  masses:
+  - 0.3
+  - 0.7
+  - 1
+  - 0
+  - 0
+  - 0
   growClip: {fileID: 8300000, guid: 42eba05094cf8d341a699a8167d51a3f, type: 3}
   shrinkClip: {fileID: 8300000, guid: 2feb7d0394cd665409024c921d6e10d9, type: 3}
   normalClip: {fileID: 0}

@@ -6,6 +6,10 @@ using UnityEngine.TextCore.Text;
 
 public class GrowScript : MonoBehaviour
 {
+
+    [SerializeField] private int NormalSizeIndex = 2;
+    [SerializeField] private List<float> jumps = new List<float>();
+    [SerializeField] private List<float> masses = new List<float>(); 
     [SerializeField] private AudioClip growClip;
     [SerializeField] private AudioClip shrinkClip;
     [SerializeField] private AudioClip normalClip;
@@ -22,13 +26,13 @@ public class GrowScript : MonoBehaviour
     private ParticleSystem currentParticles;
     private PlayerThrowing playerThrowing;
 
-    private int CurrentSize = 0;
+    private int CurrentSize = 2;
 
     [SerializeField]
-    private int MinSize = -2;
+    private int MinSize = 0;
 
     [SerializeField]
-    private int MaxSize = 2;
+    private int MaxSize = 4;
 
     void Start()
     {
@@ -74,7 +78,7 @@ public class GrowScript : MonoBehaviour
 
     public bool Grow()
     {
-        if (CurrentSize >= MaxSize)
+        if (CurrentSize >= masses.Count-1)
         {
             return false;
         }
@@ -82,11 +86,11 @@ public class GrowScript : MonoBehaviour
         CurrentSize++;
 
         playerTransform.localScale = new Vector3(playerTransform.localScale.x * 1.5f, playerTransform.localScale.y * 1.5f, playerTransform.localScale.z);
-        rb.mass *= 2.5f;
+        rb.mass = masses[CurrentSize];
 
         if (characterController2D)
         {
-            characterController2D.m_JumpForce *= 2.5f;
+            characterController2D.m_JumpForce = jumps[CurrentSize];
         }
         
         if (inventory)
@@ -114,7 +118,7 @@ public class GrowScript : MonoBehaviour
     }
 
     public bool Shrink(){
-        if (CurrentSize <= MinSize)
+        if (CurrentSize <= 0)
         {
             return false;
         }
@@ -122,11 +126,11 @@ public class GrowScript : MonoBehaviour
         CurrentSize--;
 
         playerTransform.localScale = new Vector3(playerTransform.localScale.x / 1.5f, playerTransform.localScale.y / 1.5f, playerTransform.localScale.z);
-        rb.mass /= 2.5f;
+        rb.mass = masses[CurrentSize];
 
         if (characterController2D)
         {
-            characterController2D.m_JumpForce /= 2.5f;
+            characterController2D.m_JumpForce = jumps[CurrentSize];
         }
         
         if (inventory)
@@ -154,21 +158,21 @@ public class GrowScript : MonoBehaviour
     }
 
     private bool Normal(){
-        if(CurrentSize == 0){
+        if(CurrentSize == 2){
             return false;
         }
-        if(CurrentSize <= -2){
+        if(CurrentSize <= 0){
             playerTransform.localPosition = new Vector3(playerTransform.localPosition.x, playerTransform.localPosition.y + 0.5f, playerTransform.localPosition.z);
         }
 
-        CurrentSize = 0;
+        CurrentSize = NormalSizeIndex;
 
         playerTransform.localScale = new Vector3(playerTransform.localScale.x / Mathf.Abs(playerTransform.localScale.x), playerTransform.localScale.y / playerTransform.localScale.y, playerTransform.localScale.z);
-        rb.mass = 1;
+        rb.mass = masses[CurrentSize];
 
         if (characterController2D)
         {
-            characterController2D.m_JumpForce = 1100;
+            characterController2D.m_JumpForce = jumps[CurrentSize];
         }
         
         if (inventory)
