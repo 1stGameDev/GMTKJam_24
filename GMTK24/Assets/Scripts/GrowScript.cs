@@ -6,6 +6,11 @@ using UnityEngine.TextCore.Text;
 
 public class GrowScript : MonoBehaviour
 {
+    [SerializeField] private AudioClip growClip;
+    [SerializeField] private AudioClip shrinkClip;
+    [SerializeField] private AudioClip normalClip;
+    private AudioSource audioSource;
+
     private Animator playerAnimator;
     private Transform playerTransform;
     private Rigidbody2D rb;
@@ -33,6 +38,7 @@ public class GrowScript : MonoBehaviour
         inventory = GetComponent<Inventory>();
         playerThrowing = GetComponent<PlayerThrowing>();
         playerAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -100,6 +106,10 @@ public class GrowScript : MonoBehaviour
             playerThrowing.MultiplyThrowMultiplier(2.5f);
         }
 
+        if(audioSource){
+            audioSource.PlayOneShot(growClip);
+        }
+
         return true;
     }
 
@@ -134,6 +144,10 @@ public class GrowScript : MonoBehaviour
         if (playerThrowing)
         {
             playerThrowing.MultiplyThrowMultiplier(1 / 2.5f);
+        }
+
+        if(audioSource){
+            audioSource.PlayOneShot(shrinkClip);
         }
 
         return true;
@@ -172,6 +186,11 @@ public class GrowScript : MonoBehaviour
         if (playerThrowing)
         {
             playerThrowing.NormalizeThrowMultiplier();
+        }
+
+        //TODO: We have to change this to the normalClip once we have it.
+        if(audioSource){
+            audioSource.PlayOneShot(growClip);
         }
 
         return true;
