@@ -22,6 +22,9 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+	private float coyoteTime = 0.2f;
+	private float coyoteTimer;
+
 	[Header("Events")]
 	[Space]
 
@@ -34,6 +37,7 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_wasCrouching = false;
 
 	private Animator m_CharAnimator;
+	
 
 	public bool GetFacingRight()
     {
@@ -81,6 +85,8 @@ public class CharacterController2D : MonoBehaviour
 					if (!wasGrounded)
                     {
 						OnLandEvent.Invoke();
+						coyoteTimer = coyoteTime;  // Reset coyote time when grounded
+
 
 						CameraScript camScript = Camera.main.GetComponent<CameraScript>();
 						if (camScript)
@@ -90,6 +96,12 @@ public class CharacterController2D : MonoBehaviour
 					}
 				}
 			}
+		}
+
+		// If the player is not grounded, start reducing the coyote timer
+		if (!m_Grounded)
+		{
+			coyoteTimer -= Time.fixedDeltaTime;
 		}
 
 		if (m_CharAnimator)
@@ -174,12 +186,13 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if ((m_Grounded || coyoteTimer > 0f) && jump)
 		{
-			// Add a vertical force to the player.
+			// Add a vertical force to the player
 			m_Grounded = false;
+			coyoteTimer = 0f;  // Reset coyote timer when jumping
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-
+			
 			if (m_CharAnimator)
             {
 				m_CharAnimator.Play("Jumping", m_CharAnimator.GetLayerIndex("Walking"));
