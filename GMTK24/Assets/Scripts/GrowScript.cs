@@ -74,6 +74,8 @@ public class GrowScript : MonoBehaviour
                 }
             }
         }
+
+        
     }
 
     public bool Grow()
@@ -127,6 +129,8 @@ public class GrowScript : MonoBehaviour
 
         playerTransform.localScale = new Vector3(playerTransform.localScale.x / 1.5f, playerTransform.localScale.y / 1.5f, playerTransform.localScale.z);
         rb.mass = masses[CurrentSize];
+
+        
 
         if (characterController2D)
         {
@@ -204,4 +208,11 @@ public class GrowScript : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Adjust the duration as needed
         currentParticles.Stop();
     }
+
+    private void ResetSize() 
+    {
+       playerTransform.localScale = new Vector3(1,1,1); 
+    }
+        
+
 }

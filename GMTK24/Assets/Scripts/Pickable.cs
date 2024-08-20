@@ -12,6 +12,7 @@ public class Pickable : MonoBehaviour
     private MushroomSpawnerScript spawner;
     private bool playerInRange = false;
     private GameObject player;
+    
    
    public void Initialize(MushroomSpawnerScript spw){
         spawner = spw;
@@ -34,6 +35,7 @@ public class Pickable : MonoBehaviour
             PickUp();
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
