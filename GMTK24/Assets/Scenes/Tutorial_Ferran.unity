@@ -63341,6 +63341,67 @@ MonoBehaviour:
   - Mmm... But you are too big to fit through the door. Here eat this mushroom.
   dialog: {fileID: 1423394594}
   nameText: {fileID: 2034017656}
+--- !u!1001 &1360497519
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.685406
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1321691250160894591, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_Name
+      value: Spawner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251718700744652717, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: mushroomPrefab
+      value: 
+      objectReference: {fileID: 2342070017512868624, guid: f8c3ce41960dfde42baadc09346d16d4, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
 --- !u!1 &1423394592
 GameObject:
   m_ObjectHideFlags: 0
@@ -65102,3 +65163,4 @@ SceneRoots:
   - {fileID: 84748377}
   - {fileID: 108541991}
   - {fileID: 1229254124}
+  - {fileID: 1360497519}
