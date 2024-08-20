@@ -5,51 +5,66 @@ using UnityEngine.UI;
 
 public class DialogScript : MonoBehaviour
 {
-
-
-    [SerializeField] private List<string> dialogs;
     [SerializeField] Text dialog;
     [SerializeField] Text nameText;
 
-    private float inputTimer;
-    private float inputTime = 0.2f;
+    private System.Guid CurrentID;
 
-    private int numDialogs;
-    private int zeroDialog;
-    private int currentDialog;
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        this.gameObject.SetActive(false);
+        CleanDialog();
     }
 
-    void Update(){
-        if(this.gameObject.activeInHierarchy == true){
-            inputTimer -= Time.deltaTime;
-            if(Input.GetKeyDown(KeyCode.T) && inputTimer < 0){
-                inputTimer = inputTime;
-                if(currentDialog < numDialogs){
-                    dialog.text = dialogs[zeroDialog + currentDialog];
-                }
-                else{
-                    this.gameObject.SetActive(false);
-                }
-            }
+    //void Update(){
+    //    if(this.gameObject.activeInHierarchy == true){
+    //        inputTimer -= Time.deltaTime;
+    //        if(Input.GetKeyDown(KeyCode.T) && inputTimer < 0){
+    //            inputTimer = inputTime;
+    //            if(currentDialog < numDialogs){
+    //                dialog.text = dialogs[zeroDialog + currentDialog];
+    //            }
+    //            else{
+    //                this.gameObject.SetActive(false);
+    //            }
+    //        }
+    //    }
+    //}
+
+    public void ShowDialog(System.Guid id, string charName, string dialogue)
+    {
+        if (dialog)
+        {
+            dialog.text = dialogue;
+        }
+        if (nameText)
+        {
+            nameText.text = charName;
+        }
+
+        CurrentID = id;
+
+        gameObject.SetActive(true);
+    }
+
+    public void CleanDialog()
+    {
+        if (dialog)
+        {
+            dialog.text = "";
+        }
+        if (nameText)
+        {
+            nameText.text = "";
+        }
+
+        gameObject.SetActive(false);
+    }
+
+    public void HideDialog(System.Guid id)
+    {
+        if (id == CurrentID)
+        {
+            CleanDialog();
         }
     }
-
-    public void SetDialog(string source){
-        switch (source){
-            case "Caterpillar":
-                numDialogs = int.Parse(dialogs[0]);
-                zeroDialog = 1;
-                currentDialog = 0;
-                dialog.text = dialogs[1];
-                nameText.text = "Caterpillar Lady";
-                this.gameObject.SetActive(true);
-                break;
-        }
-
-    }
-
 }
