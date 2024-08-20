@@ -542,6 +542,67 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 1711044626}
   m_SourcePrefab: {fileID: 100100000, guid: d6461116364db8f48ba4273fd12b9af2, type: 3}
+--- !u!1001 &140153846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.54371
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382134135766099911, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1321691250160894591, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: m_Name
+      value: Spawner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251718700744652717, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
+      propertyPath: mushroomPrefab
+      value: 
+      objectReference: {fileID: 2342070017512868624, guid: f8c3ce41960dfde42baadc09346d16d4, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5a9c87e80f2215044ae8680306e58dfc, type: 3}
 --- !u!1 &161856621
 GameObject:
   m_ObjectHideFlags: 0
@@ -62636,11 +62697,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4134769976679607149, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.17
+      value: -8.95
       objectReference: {fileID: 0}
     - target: {fileID: 4134769976679607149, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.23
+      value: 24.28
       objectReference: {fileID: 0}
     - target: {fileID: 4134769976679607149, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62996,6 +63057,86 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 7515580229612455956, guid: 34611f4a27ebd9543b50b4d830a96330, type: 3}
   m_PrefabInstance: {fileID: 481938470041012416}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &737650051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737650052}
+  - component: {fileID: 737650054}
+  - component: {fileID: 737650053}
+  m_Layer: 5
+  m_Name: GramoText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &737650052
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737650051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 857142541}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -167.4, y: 43.7}
+  m_SizeDelta: {x: 585.5, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &737650053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737650051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 2
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: You fiddle with the gramophone and the Caterpillar woman's voice rings
+    out.
+--- !u!222 &737650054
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737650051}
+  m_CullTransparentMesh: 1
 --- !u!1 &857142540
 GameObject:
   m_ObjectHideFlags: 0
@@ -63029,6 +63170,7 @@ RectTransform:
   - {fileID: 1565751524}
   - {fileID: 1423394593}
   - {fileID: 58795379}
+  - {fileID: 737650052}
   m_Father: {fileID: 1229254124}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -0, y: -0}
@@ -63335,12 +63477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a54cc43e3b27149a2deb15f9dcd505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogs:
-  - 2
-  - "Oh! A little insect\u2019s dropped in! Get out of my house, pest! GO!"
-  - Mmm... But you are too big to fit through the door. Here eat this mushroom.
   dialog: {fileID: 1423394594}
   nameText: {fileID: 2034017656}
+  gramoText: {fileID: 737650053}
 --- !u!1001 &1359431739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63352,6 +63491,15 @@ PrefabInstance:
     - target: {fileID: 939163948307948692, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
       propertyPath: m_Name
       value: DialogueTrigger (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163728809564315043, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
+      propertyPath: DialogLine
+      value: That is a growth mushroom. It'll make you so horrendously large, even
+        those stupid malfunctioning clocks won't be able to blow you away.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163728809564315043, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
+      propertyPath: DialogCharacter
+      value: Gramophone
       objectReference: {fileID: 0}
     - target: {fileID: 6182290979479301389, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
       propertyPath: m_LocalScale.x
@@ -63461,10 +63609,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -64707,6 +64855,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueTrigger (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3163728809564315043, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
+      propertyPath: DialogLine
+      value: For the last time, stop coming into my house! Wait...you're too fat
+        to be the White Rabbit. What kind of a rabbit are you? Actually. I don't
+        care. Leave immediately.
+      objectReference: {fileID: 0}
     - target: {fileID: 6182290979479301389, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.761401
@@ -64958,6 +65112,15 @@ PrefabInstance:
     - target: {fileID: 939163948307948692, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
       propertyPath: m_Name
       value: DialogueTrigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163728809564315043, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
+      propertyPath: DialogLine
+      value: It's a different color, child. That will make you go back to your regular,
+        oafish size. A disgusting size to be, quite, honestly.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163728809564315043, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
+      propertyPath: DialogCharacter
+      value: Gramophone
       objectReference: {fileID: 0}
     - target: {fileID: 6182290979479301389, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
       propertyPath: m_LocalScale.y
@@ -65218,6 +65381,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 3163728809564315043, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
+      propertyPath: DialogLine
+      value: What? Can't fit? Eat another mushroom then. Do they teach you nothing
+        decent at rabbit school?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163728809564315043, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
+      propertyPath: DialogCharacter
+      value: Gramophone
+      objectReference: {fileID: 0}
     - target: {fileID: 6182290979479301389, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.99
@@ -65317,7 +65489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7645004999878809888, guid: dfe42552e42ce8e40a61f2f48478b9cc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -65350,3 +65522,4 @@ SceneRoots:
   - {fileID: 2060610252}
   - {fileID: 1359431739}
   - {fileID: 1801037782}
+  - {fileID: 140153846}

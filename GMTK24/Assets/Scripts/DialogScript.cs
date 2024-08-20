@@ -7,6 +7,7 @@ public class DialogScript : MonoBehaviour
 {
     [SerializeField] Text dialog;
     [SerializeField] Text nameText;
+    [SerializeField] Text gramoText;
 
     private System.Guid CurrentID;
 
@@ -39,6 +40,12 @@ public class DialogScript : MonoBehaviour
         if (nameText)
         {
             nameText.text = charName;
+            if(nameText.text != "Lady Caterpillar"){
+                gramoText.gameObject.SetActive(true);
+            }
+            else{
+                gramoText.gameObject.SetActive(false);
+            }
         }
 
         CurrentID = id;
