@@ -196,9 +196,8 @@ public class GrowScript : MonoBehaviour
             playerThrowing.NormalizeThrowMultiplier();
         }
 
-        //TODO: We have to change this to the normalClip once we have it.
         if(audioSource){
-            audioSource.PlayOneShot(growClip);
+            audioSource.PlayOneShot(normalClip);
         }
 
         return true;
