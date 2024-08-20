@@ -15410,7 +15410,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 4
   m_AngularDrag: 0.05
-  m_GravityScale: 7
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -15463,7 +15463,7 @@ MonoBehaviour:
   - 1.6
   growClip: {fileID: 8300000, guid: 42eba05094cf8d341a699a8167d51a3f, type: 3}
   shrinkClip: {fileID: 8300000, guid: 2feb7d0394cd665409024c921d6e10d9, type: 3}
-  normalClip: {fileID: 0}
+  normalClip: {fileID: 8300000, guid: dc0bf47c02be05e469237d5a1aedba8c, type: 3}
   growParicles: {fileID: 7400766098181662581}
   shrinkParticles: {fileID: 6885599289845528370}
   normalParticles: {fileID: 3351575274573376441}
