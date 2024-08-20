@@ -15405,7 +15405,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.7
   m_LinearDrag: 4
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -15449,16 +15449,16 @@ MonoBehaviour:
   NormalSizeIndex: 2
   jumps:
   - 350
-  - 800
+  - 750
   - 1500
   - 1500
-  - 4500
+  - 4000
   masses:
   - 0.6
   - 0.9
   - 1.7
   - 1.9
-  - 4
+  - 3
   growClip: {fileID: 8300000, guid: 42eba05094cf8d341a699a8167d51a3f, type: 3}
   shrinkClip: {fileID: 8300000, guid: 2feb7d0394cd665409024c921d6e10d9, type: 3}
   normalClip: {fileID: 0}
