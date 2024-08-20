@@ -15448,19 +15448,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NormalSizeIndex: 2
   jumps:
-  - 300
-  - 1000
+  - 350
+  - 800
   - 1500
-  - 0
-  - 0
-  - 0
+  - 1500
+  - 4500
   masses:
-  - 0.3
-  - 0.7
-  - 1
-  - 0
-  - 0
-  - 0
+  - 0.6
+  - 0.9
+  - 1.7
+  - 1.9
+  - 4
   growClip: {fileID: 8300000, guid: 42eba05094cf8d341a699a8167d51a3f, type: 3}
   shrinkClip: {fileID: 8300000, guid: 2feb7d0394cd665409024c921d6e10d9, type: 3}
   normalClip: {fileID: 0}
