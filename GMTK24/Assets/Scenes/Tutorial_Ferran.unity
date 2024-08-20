@@ -62145,6 +62145,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8654360352018624783, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654360352018624783, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d49156029821eb844850faf971fa8a02, type: 3}
+    - target: {fileID: 8654360352018624783, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4811180303373131400, guid: 7afebc0b42a8600488950ac7baf12891, type: 3}
       propertyPath: m_JumpForce
       value: 1100
@@ -64886,13 +64898,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1192670145683106181, guid: dfe42552e42ce8e40a61f2f48478b9cc, type: 3}
+      propertyPath: m_Volume
+      value: 0.69
+      objectReference: {fileID: 0}
     - target: {fileID: 7645004999878809888, guid: dfe42552e42ce8e40a61f2f48478b9cc, type: 3}
       propertyPath: m_Name
       value: Song
       objectReference: {fileID: 0}
     - target: {fileID: 7645004999878809888, guid: dfe42552e42ce8e40a61f2f48478b9cc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
