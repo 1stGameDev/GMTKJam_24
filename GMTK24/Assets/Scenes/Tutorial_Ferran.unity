@@ -64859,7 +64859,8 @@ PrefabInstance:
       propertyPath: DialogLine
       value: For the last time, stop coming into my house! Wait...you're too fat
         to be the White Rabbit. What kind of a rabbit are you? Actually. I don't
-        care. Leave immediately.
+        care. Leave immediately. Those mushrooms over there. Eat one and you'll be
+        a decent, normal and door-fittingsize.
       objectReference: {fileID: 0}
     - target: {fileID: 6182290979479301389, guid: 58e76be000bc55948bc91900e2d8810f, type: 3}
       propertyPath: m_LocalScale.x
