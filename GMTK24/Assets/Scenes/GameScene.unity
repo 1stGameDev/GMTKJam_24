@@ -31283,21 +31283,13 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 8480048404937505356, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
-      propertyPath: jumps.Array.data[0]
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480048404937505356, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
-      propertyPath: jumps.Array.data[3]
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480048404937505356, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
-      propertyPath: jumps.Array.data[4]
-      value: 0.175
-      objectReference: {fileID: 0}
     - target: {fileID: 8525877070812766467, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654360352018624783, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8654360352018624783, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
       propertyPath: m_audioClip
