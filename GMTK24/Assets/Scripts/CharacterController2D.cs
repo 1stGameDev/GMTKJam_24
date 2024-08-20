@@ -37,6 +37,8 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_wasCrouching = false;
 
 	private Animator m_CharAnimator;
+
+	public AudioSource walkingClip;
 	
 
 	public bool GetFacingRight()
@@ -153,6 +155,17 @@ public class CharacterController2D : MonoBehaviour
 					OnCrouchEvent.Invoke(false);
 				}
 			}
+			if(move != 0){
+				if(!walkingClip.isPlaying ){
+					walkingClip.Play();
+				}
+			}
+			else{
+				if(walkingClip.isPlaying){
+					walkingClip.Stop();
+				}
+			}
+			
 
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
