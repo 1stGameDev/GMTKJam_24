@@ -61643,11 +61643,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-<<<<<<< HEAD
-  - m_RefCount: 131
-=======
   - m_RefCount: 133
->>>>>>> main
     m_Data: {fileID: 11400000, guid: a3aa6df9df88a9941a34b10b8a2fdd37, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: b606156d92c76d74fa049ad771b15932, type: 2}
@@ -61655,35 +61651,22 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 52d7953da4dfad94c910f92ddef2b14e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5bfeda89c46ed7d409fbcf49e48ede0c, type: 2}
-<<<<<<< HEAD
-  - m_RefCount: 5964
-=======
   - m_RefCount: 5959
->>>>>>> main
     m_Data: {fileID: 11400000, guid: 798db2a905bde87449060c40787fbd7c, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-<<<<<<< HEAD
-  - m_RefCount: 131
-=======
   - m_RefCount: 133
->>>>>>> main
     m_Data: {fileID: 21300000, guid: 469295a1d8a54f94aa7f1834fc7d73a7, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: 697d13f5af2e7004d8a4907fb05e84d8, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 9d617529ae4182449a86471690992b80, type: 3}
   - m_RefCount: 1
-<<<<<<< HEAD
-    m_Data: {fileID: 21300000, guid: cfea5f6bc2c420746812282fc1b00efa, type: 3}
-  - m_RefCount: 5964
-=======
     m_Data: {fileID: 21300000, guid: 7e7a05389bfd7dd4c875e97c05f77bda, type: 3}
   - m_RefCount: 5959
->>>>>>> main
     m_Data: {fileID: 21300000, guid: c4743d35e59a25e45a635f96110e67fb, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 6098
@@ -62700,13 +62683,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 5803696107989556700, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
->>>>>>> main
     - target: {fileID: 8525877070812766467, guid: 921d5385a8c4fb14eba8c9576175bb1f, type: 3}
       propertyPath: m_Name
       value: Player
