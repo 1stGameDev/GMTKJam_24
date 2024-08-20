@@ -6,6 +6,9 @@ public class FanScript : MonoBehaviour
 {
     public float windStrength = 100f;
 
+    //Left, this int = 1, and right, -1.
+    public int WindLeftRight = 1;
+
     private Transform trans;
     // Start is called before the first frame update
 
@@ -16,7 +19,7 @@ public class FanScript : MonoBehaviour
             if(rb != null)
             {
                 Vector2 windDirection = transform.up;
-                Vector2 windForce = windDirection * windStrength;
+                Vector2 windForce = windDirection * windStrength * WindLeftRight;
                 rb.AddForce(windForce, ForceMode2D.Force);
             }
         }
@@ -27,7 +30,7 @@ public class FanScript : MonoBehaviour
         if (rb != null)
         {
             Vector2 windDirection = transform.up;
-            Vector2 windForce = windDirection * windStrength;
+            Vector2 windForce = windDirection * windStrength * WindLeftRight;
             rb.AddForce(windForce, ForceMode2D.Force);
         }
     }
